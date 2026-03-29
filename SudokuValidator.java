@@ -6,7 +6,7 @@ public class SudokuValidator {
 
 	public static void main(String[] args) {
 
-		Scanner sc = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		while (true) {
 
@@ -16,11 +16,11 @@ public class SudokuValidator {
 
 			int choice;
 
-			if (sc.hasNextInt()) {
-				choice = sc.nextInt();
+			if (scanner.hasNextInt()) {
+				choice = scanner.nextInt();
 			} else {
 				System.out.println("Enter a valid number.");
-				sc.next();
+				scanner.next();
 				continue;
 			}
 
@@ -55,7 +55,7 @@ public class SudokuValidator {
 				String level;
 				while (true) {
 					System.out.println("Enter difficulty (easy/medium/hard): ");
-					level = sc.next();
+					level = scanner.next();
 
 					if (level.equalsIgnoreCase("easy") || level.equalsIgnoreCase("medium")
 							|| level.equalsIgnoreCase("hard")) {
@@ -80,27 +80,27 @@ public class SudokuValidator {
 
 					int r, c, num;
 
-					if (sc.hasNextInt()) {
-						r = sc.nextInt();
+					if (scanner.hasNextInt()) {
+						r = scanner.nextInt();
 					} else {
 						System.out.println("Invalid input. Enter numbers only.");
-						sc.next();
+						scanner.next();
 						continue;
 					}
 
-					if (sc.hasNextInt()) {
-						c = sc.nextInt();
+					if (scanner.hasNextInt()) {
+						c = scanner.nextInt();
 					} else {
 						System.out.println("Invalid input. Enter numbers only.");
-						sc.next();
+						scanner.next();
 						continue;
 					}
 
-					if (sc.hasNextInt()) {
-						num = sc.nextInt();
+					if (scanner.hasNextInt()) {
+						num = scanner.nextInt();
 					} else {
 						System.out.println("Invalid input. Enter numbers only.");
-						sc.next();
+						scanner.next();
 						continue;
 					}
 
@@ -156,6 +156,6 @@ public class SudokuValidator {
 			}
 		}
 
-		sc.close();
+		scanner.close();
 	}
 }
